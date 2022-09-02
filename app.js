@@ -43,13 +43,16 @@ function addToDo(event){
     
     // append todoDIv to todoList
     todoList.appendChild(todoDiv);
-
+    
     //clear todoInput ;
     todoInput.value="";
-    if (todoList.childNodes.length > 0){
+    
+    if (todoList.childNodes.length > 1){
         heading.classList.remove("hidden");
     }
-
+    // else{
+    //     heading.classList.add("hidden")
+    // }
     
 
 
@@ -70,12 +73,15 @@ function deleteItem(e){
 
         })
         
+        
     }
+    
+    
     if (item.classList.contains("edit-button")){
         const checked = item.parentElement;
         checked.classList.toggle("completed");
-        console.log(doneList);
-        console.log(checked);
+        //console.log(doneList);
+        //console.log(checked);
         //changing color of warning
         const warn = checked.childNodes[0];
         //.log(warn);
@@ -84,7 +90,7 @@ function deleteItem(e){
             
             doneList.appendChild(checked);
             warn.childNodes[0].classList.add("hidden")
-            if (doneList.childNodes.length > 0){
+            if (doneList.childNodes.length > 1){
                 heading1.classList.remove("hidden");
             }
             
@@ -94,4 +100,16 @@ function deleteItem(e){
         })
 
     }
+    if (todoList.childNodes.length > 1){
+        heading.classList.remove("hidden");
+    }
+    
+    if (todoList.childNodes.length == 2){
+        heading.classList.toggle("hidden")
+    }
+    // console.log(todoList);
+    // console.log(todoList.childNodes);
+    // console.log(todoList.childNodes.length );
+    // console.log(heading.classList);
+    
 }
