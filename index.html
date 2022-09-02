@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container mx-auto flex flex-col items-center ">
+        <div class="content w-4/5">
+            <div class="heading flex flex-col items-center ">
+                <h1 class="title text-5xl font-bold mb-2">Today's Tasks</h1>
+                <div class="underline w-24 bg-red-600 h-1 rounded-xl"></div>
+            </div>
+            <form action="" class="my-10 flex gap-3 h-7 justify-center items-center ">
+                <input placeholder="Enter Task" type="text" class=" todo-input border w-[250px]   h-8 rounded-lg   " />
+                <button class=" flex items-center justify-center todo-button bg-black hover:bg-white transi px-3 h-8 rounded-lg " type="submit">
+                    <i class="fa-solid fa-plus text-white text-xl   "></i>
+                </button>
+            </form>
+            <div class="total-tasks mt-20 flex flex-col  items-center  gap-20">
+                <div class="tasks ">
+                    <div class="todo-container flex flex-col justify-center  ">
+                        <h1 class="title hidden task-title text-3xl font-bold mb-2">To - D0</h1>
+                        <ul class="todo-list">
+    
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="done-tasks ">
+                    <div class="done-container flex flex-col justify-center ">
+                        <h1 class="title hidden task-title-1 text-3xl font-bold mb-2">Done</h1>
+                        <ul class="done-list">
+    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

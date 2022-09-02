@@ -1,0 +1,63 @@
+body{
+    font-family: "Poppins";
+}
+.container{
+    margin-top: 10%;
+}
+input[type=text]:focus{
+    outline: none;
+    border: 2px solid black;
+}
+input[type=text]::placeholder{
+    text-align: left;
+    padding-left: 10px;
+}
+.todo-button:hover i{
+    color: black;
+    
+}
+.todo-button{
+    transition: all 0.5s linear;
+}
+.todo{
+    min-width: 300px;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: black;
+    transition: all 0.5s ease;
+}
+.edit-button,.trash-button{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.warning{
+    margin-right: 0.5rem;
+}
+.todo-item{
+    margin-right: 1rem;
+}
+.tasks,.done-tasks{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.todo li{
+    flex:1;
+    
+
+}
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateY(10rem);
+    opacity: 0.5
+}
